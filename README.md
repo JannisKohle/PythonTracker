@@ -53,6 +53,8 @@ Examples:
 
 'created method xy1 in class xy2', 'removed class xy3', 'changed method xy4 in class xy5', 'removed method xy6', ...
 
+#########
+
 After you saved the status of your python file a few times, it should like similar to this example:
 
 1.
@@ -86,6 +88,8 @@ After you saved the status of your python file a few times, it should like simil
 -changed method xy6 in class xy4
 
 -changed method xy0
+
+#########
 
 If we print out the structure view ('pytracker structure-view') now, we will see this:
 
