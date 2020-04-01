@@ -111,17 +111,21 @@ If we print out the structure view ('pytracker structure-view') now, we will see
 
 File Structure (not very important for users):
 
--your Project
+-your Project:
 
---PythonTracker
+--filename.py
+
+--filename_changes.txt
+
+--PythonTracker:
 
 ---README.md
 
 ---tracker.py
 
----.git
+---.git: ...
 
----data
+---data:
 
 ----version1
 
@@ -146,7 +150,3 @@ File Structure (not very important for users):
 -----v4_code.py
 
 -----v4_structure.txt
-
---filename.py
-
---filename_changes.txt
