@@ -6,8 +6,8 @@ How to use it: (It might change in the future)
 
 -install git and python if you haven't already
 
--Clone this Repo into your Project directory.
-'cd path/to/your/project/directory'
+-Clone this Repo into your Project directory:
+'cd path/to/your/project/directory',
 'git clone github.com/JannisKohle/PythonTracker'
 
 -Specify file to track: 'pytracker filename {name_of_your_python_file}'
@@ -56,33 +56,51 @@ Examples:
 After you saved the status of your python file a few times, it should like similar to this example:
 
 1.
+
 -method xy0
+
 -class xy1
+
 --method xy2
+
 --method xy3
 
 2.
+
 -created class xy4
+
 -created method xy5 in class xy4
+
 -changed method xy3 in class xy1
 
 3.
+
 -changed method xy5 in class xy4
+
 -created method xy6 in class xy4
 
 4.
+
 -changed method xy2 in class xy1
+
 -changed method xy6 in class xy4
+
 -changed method xy0
 
 If we print out the structure view ('pytracker structure-view') now, we will see this:
 
 -method xy0
+
 -class xy1
+
 --method xy2
+
 --method xy3
+
 -class xy4
+
 --method xy5
+
 --method xy6
 
 #################################################
@@ -92,25 +110,39 @@ File Structure (not very important for users):
 -your Project
 
 --PythonTracker
+
 ---README.md
+
 ---tracker.py
+
 ---.git
+
 ---data
+
 ----version1
+
 -----v1_code.py
+
 -----v1_structure.txt
 
 ----version2
+
 -----v2_code.py
+
 -----v2_structure.txt
 
 ----version3
+
 -----v3_code.py
+
 -----v3_structure.txt
 
 ----version4
+
 -----v4_code.py
+
 -----v4_structure.txt
 
 --filename.py
+
 --filename_changes.txt
