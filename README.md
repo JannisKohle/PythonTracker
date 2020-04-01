@@ -123,7 +123,11 @@ File Structure (not very important for users):
 
 ---tracker.py
 
----.git: ...
+---.git:
+
+----.....
+
+----.....
 
 ---data:
 
