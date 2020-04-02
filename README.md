@@ -2,7 +2,7 @@ PythonTracker is a program that keeps track of the changes you make to classes a
 
 #################################################
 
-How to use it: (It might change in the future)
+How to use it: (It is not working yet. This is just what I would like it to be.)
 
 -install git and python if you haven't already
 
