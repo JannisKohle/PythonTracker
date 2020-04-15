@@ -1,11 +1,8 @@
+import os
+
 filetotrack = ""  # type the name of the python file whose changes you want to save
 
 ###########################################################################################################################################
-
-
-def read_current_version():
-    global filetotrack
-    return read(f"../{filetotrack}")
 
 
 def read(file):
@@ -16,18 +13,29 @@ def write(file, text):
     with open(file), "w") as f:
         f.write(text)
 
+def create_everything():
+    global filetotrack
+
+    if "versions" not in os.listdir():
+        os.system("mkdir versions")
+
+    if f"{filetotrack}_changes.txt" not in os.listdir():
+        os.system(f"touch {filetotrack}_changes.txt)
+
 ###########################################################################################################################################
 
 def compare_versions(v1, v2):  # compare versions and write changes to .txt file
     pass
 
 
-def add_version(v):  # add the version to data
-    pass
+def add_version():  # add the version to versions
+    global filetotrack
+    version=len(os.listdir("versions")) + 1
+    os.system(f"cp ../{filetotrack} versions/v{version}")
 
 
 def reset_everything():  # reset everything
-    pass
+    os.system("rm -rf versions")
 
 
 def get_structure(v):
@@ -52,13 +60,15 @@ def get_structure(v):
         return output
 
 
-    lines=read(f"data/{v}").split("\n")
+    lines=read(f"versions/{v}").split("\n")
     l=[]
     for line in lines:
         l.append((how_many_spaces(line)/4 + 1) * "-" + line[how_many_spaces(line):])
 
     # only classes and methods/functions
     l=[remove_method_class_stuff(item) for item in l if "class" in item or "def" in item]
+
+    return l
 
 
 # Main Part:
