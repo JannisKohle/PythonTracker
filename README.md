@@ -4,21 +4,21 @@ PythonTracker is a program that keeps track of the changes you make to classes a
 
 ## How to use it: (It is not working yet. This is just what I would like it to be.)
 
--install git and python if you haven't already
+- install git and python if you haven't already
 
--Clone this Repo into your Project directory:
-'cd path/to/your/project/directory',
-'git clone github.com/JannisKohle/PythonTracker'
+- Clone this Repo into your Project directory:
+```cd path/to/your/project/directory```,
+```git clone github.com/JannisKohle/PythonTracker```
 
--Specify file to track: 'pytracker filename {name_of_your_python_file}'
+- Specify file to track: ```pytracker filename {name_of_your_python_file}```
 
--Save current status of file: 'pytracker save'
+- Save current status of file: ```pytracker save``` (Do this to start tracking the file)
 
 ### Other commands:
 
--Reset everything (all the older versions will be lost): 'pytracker reset yes' <- if you type 'no', it doesn't reset
+-Reset everything (all the older versions will be lost): ```pytracker reset yes``` <- if you type ```no```, it doesn't reset
 
--print current structure view of classes and methods: 'pytracker structure-view'
+-print current structure view of classes and methods: ```pytracker structure-view```
 
 ### How to see the changes:
 
