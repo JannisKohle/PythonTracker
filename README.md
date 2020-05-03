@@ -1,8 +1,8 @@
+# PythonTracker
+
 PythonTracker is a program that keeps track of the changes you make to classes and methods in a python file.
 
-#################################################
-
-How to use it: (It is not working yet. This is just what I would like it to be.)
+## How to use it: (It is not working yet. This is just what I would like it to be.)
 
 -install git and python if you haven't already
 
@@ -14,17 +14,13 @@ How to use it: (It is not working yet. This is just what I would like it to be.)
 
 -Save current status of file: 'pytracker save'
 
-#########
-
-Other commands:
+### Other commands:
 
 -Reset everything (all the older versions will be lost): 'pytracker reset yes' <- if you type 'no', it doesn't reset
 
 -print current structure view of classes and methods: 'pytracker structure-view'
 
-#################################################
-
-How to see the changes:
+### How to see the changes:
 
 After you run tracker.py the first time, it will automatically create a file called '{name_of_your_python_file}_changes.txt'.
 In the file you can see a structured view of your classes and methods. Example:
@@ -51,9 +47,9 @@ and the method xy7 is in the method xy6. So that's what you see after running tr
 If you run tracker.py after that, it is going to append something like this to your file:
 Examples:
 
-'created method xy1 in class xy2', 'removed class xy3', 'changed method xy4 in class xy5', 'removed method xy6', ...
+```created method xy1 in class xy2```, ```removed class xy3```, ```changed method xy4 in class xy5```, ...
 
-#########
+------------------------
 
 After you saved the status of your python file a few times, it should like similar to this example:
 
@@ -89,9 +85,9 @@ After you saved the status of your python file a few times, it should like simil
 
 -changed method xy0
 
-#########
+------------------------
 
-If we print out the structure view ('pytracker structure-view') now, we will see this:
+If we print out the structure view (```pytracker structure-view```) now, we will see this:
 
 -method xy0
 
@@ -107,9 +103,7 @@ If we print out the structure view ('pytracker structure-view') now, we will see
 
 --method xy6
 
-#################################################
-
-File Structure (not very important for users):
+## File Structure (not very important for users):
 
 -your Project:
 
@@ -129,7 +123,7 @@ File Structure (not very important for users):
 
 ----.....
 
----data:
+---versions:
 
 ----version1
 
