@@ -1,6 +1,7 @@
 import os
 
-filetotrack = "test.py"  # type the name of the python file whose changes you want to save
+# 'pytracker_test.py is outside of this directroy, so you can't see it in the Repo.
+filetotrack = "pytracker_test.py"  # type the name of the python file whose changes you want to save
 
 ###########################################################################################################################################
 
@@ -33,8 +34,8 @@ def compare_versions(v1, v2):  # compare versions and write changes to .txt file
 
 def add_version():  # add the version to versions
     global filetotrack
-    version = len(os.listdir("versions")) + 1
-    os.system(f"cp ../{filetotrack} versions/v{version}")
+    version_num = len(os.listdir("versions")) + 1
+    os.system(f"cp ../{filetotrack} versions/v{version_num}.py")
 
 
 def reset_everything():  # reset everything
@@ -71,6 +72,3 @@ def get_structure(v):
     l = [remove_method_class_stuff(item) for item in l if "class" in item or "def" in item]
 
     return l
-
-
-print(get_structure("test.py"))
