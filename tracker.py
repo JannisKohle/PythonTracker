@@ -1,17 +1,19 @@
 import os
 
-filetotrack = ""  # type the name of the python file whose changes you want to save
+filetotrack = "test.py"  # type the name of the python file whose changes you want to save
 
 ###########################################################################################################################################
 
 
 def read(file):
-    with open(file), "r") as f:
+    with open(file, "r") as f:
         return f.read()
 
+
 def write(file, text):
-    with open(file), "w") as f:
+    with open(file, "w") as f:
         f.write(text)
+
 
 def create_everything():
     global filetotrack
@@ -20,9 +22,10 @@ def create_everything():
         os.system("mkdir versions")
 
     if f"{filetotrack}_changes.txt" not in os.listdir():
-        os.system(f"touch {filetotrack}_changes.txt)
+        os.system(f"touch {filetotrack}_changes.txt")
 
 ###########################################################################################################################################
+
 
 def compare_versions(v1, v2):  # compare versions and write changes to .txt file
     pass
@@ -30,7 +33,7 @@ def compare_versions(v1, v2):  # compare versions and write changes to .txt file
 
 def add_version():  # add the version to versions
     global filetotrack
-    version=len(os.listdir("versions")) + 1
+    version = len(os.listdir("versions")) + 1
     os.system(f"cp ../{filetotrack} versions/v{version}")
 
 
@@ -40,7 +43,7 @@ def reset_everything():  # reset everything
 
 def get_structure(v):
     def how_many_spaces(line):
-        counter=0
+        counter = 0
         for i in line:
             if i == " ":
                 counter += 1
@@ -49,26 +52,25 @@ def get_structure(v):
         return counter
 
     def remove_method_class_stuff(s):
-        output=""
+        output = ""
         for i in s:
             if i != "(":
                 output += i
             else:
                 break
 
-        output.replace("def", "method", 1)
+        output = output.replace("def", "method", 2)
         return output
 
-
-    lines=read(f"versions/{v}").split("\n")
-    l=[]
+    lines = read(f"versions/{v}").split("\n")
+    l = []
     for line in lines:
-        l.append((how_many_spaces(line)/4 + 1) * "-" + line[how_many_spaces(line):])
+        l.append((int(how_many_spaces(line)/4 + 1))*"- " + line[how_many_spaces(line):])
 
     # only classes and methods/functions
-    l=[remove_method_class_stuff(item) for item in l if "class" in item or "def" in item]
+    l = [remove_method_class_stuff(item) for item in l if "class" in item or "def" in item]
 
     return l
 
 
-# Main Part:
+print(get_structure("test.py"))

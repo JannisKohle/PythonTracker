@@ -7,7 +7,7 @@ PythonTracker is a program that keeps track of the changes you make to classes a
 - install git and python if you haven't already
 
 - Clone this Repo into your Project directory:
-```cd path/to/your/project/directory```,
+```cd path/to/your/projects/directory```,
 ```git clone github.com/JannisKohle/PythonTracker```
 
 - Specify file to track: ```pytracker filename {name_of_your_python_file}```
