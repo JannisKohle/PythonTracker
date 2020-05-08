@@ -17,7 +17,7 @@ It is very similar to git, just not for Repositories but it's optimized for pyth
 
 ### Other commands:
 
-- Save current status of file: ```pytracker save {versio-name}```
+- Save current status of file: ```pytracker save {version-name}```
 
 - reset everything (all the older versions will be lost): ```pytracker reset yes``` <- if you type ```no```, it doesn't reset
 
