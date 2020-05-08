@@ -13,13 +13,17 @@ It is very similar to git, just not for Repositories but it's optimized for pyth
 
 - Specify file to track: ```pytracker filename {name_of_your_python_file}```
 
-- Save current status of file: ```pytracker save``` (Do this to start tracking the file)
+- create the first version ```pytracker init``` (If you do this later, it will delete all versions and start everything from the start)
 
 ### Other commands:
 
--Reset everything (all the older versions will be lost): ```pytracker reset yes``` <- if you type ```no```, it doesn't reset
+- Save current status of file: ```pytracker save {versio-name}```
 
--print current structure view of classes and methods: ```pytracker structure-view```
+- reset everything (all the older versions will be lost): ```pytracker reset yes``` <- if you type ```no```, it doesn't reset
+
+- print current structure view of classes and methods: ```pytracker structure-view```
+
+- change the python file to older version: ```pytracker go-to {version-name}``` To go back to the latest version, do ```pytracker go-to-latest```
 
 ### How to see the changes:
 
