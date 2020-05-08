@@ -23,3 +23,17 @@ class c2():
 
     def f8():
         pass
+
+    def f9():
+        pass
+
+    def f10():
+        pass
+
+    def f11():
+        pass
+
+
+class c3():
+    def f12():
+        pass
