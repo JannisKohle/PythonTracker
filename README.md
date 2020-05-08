@@ -13,7 +13,7 @@ It is very similar to git, just not for Repositories but it's optimized for pyth
 
 - Specify file to track: ```pytracker filename {name_of_your_python_file}```
 
-- create the first version ```pytracker init``` (If you do this later, it will delete all versions and start everything from the start)
+- create the first version: ```pytracker init``` (If you do this later, it will delete all versions and start everything from the start) This will also create the text file and write the structure-view of the first version.
 
 ### Other commands:
 
