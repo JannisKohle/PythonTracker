@@ -1,7 +1,7 @@
 import os
 
 # 'pytracker_test.py is outside of this directroy, so you can't see it in the Repo.
-filetotrack = "pytracker_test.py"  # type the name of the python file whose changes you want to save
+filetotrack = "pytracker_test.py"
 
 ###########################################################################################################################################
 
@@ -35,7 +35,11 @@ def compare_versions(v1, v2):  # compare versions and write changes to .txt file
 def add_version():  # add the version to versions
     global filetotrack
     version_num = len(os.listdir("versions")) + 1
-    os.system(f"cp ../{filetotrack} versions/v{version_num}.py")
+    # if latest version == current version
+    if read(f"versions/v{version_num-1}.py") != read(f"../{filetotrack}"):
+        os.system(f"cp ../{filetotrack} versions/v{version_num}.py")
+    else:
+        return "No changes to save"
 
 
 def reset_everything():  # reset everything
