@@ -1,6 +1,7 @@
 # PythonTracker
 
 PythonTracker is a program that keeps track of the changes you make to classes and methods in a python file.
+It is very similar to git, just not for Repositories but it's optimized for python files.
 
 ## How to use it: (It is not working yet. This is just what I would like it to be.)
 
