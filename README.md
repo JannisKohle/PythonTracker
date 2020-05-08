@@ -21,9 +21,17 @@ It is very similar to git, just not for Repositories but it's optimized for pyth
 
 - reset everything (all the older versions will be lost): ```pytracker reset yes``` <- if you type ```no```, it doesn't reset
 
-- print current structure view of classes and methods: ```pytracker structure-view```
+- print current structure view of classes and methods: ```pytracker structure-view``` To get the structure-view of a specific version, do ```pytracker structure-view {version-name}```
 
 - change the python file to older version: ```pytracker go-to {version-name}``` To go back to the latest version, do ```pytracker go-to-latest```
+
+- print out all versions: ```pytracker history```
+
+- combine two versions which are next to each other on a timeline: ```pytracker combine {v1-name} {v2-name} {new-name}```
+
+### How combining works:
+
+With combining, you can combine two versions into one version. It's important that the versions are next to each other and in the right order.
 
 ### How to see the changes:
 
