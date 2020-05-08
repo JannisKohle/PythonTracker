@@ -40,10 +40,25 @@ def compare_versions(v1, v2):  # compare versions and write changes to .txt file
 
 def init():
     global filetotrack
+
+    # delete all versions:
+    os.system("rm -r versions")
+    os.system("mkdir versions")
+
+    # copy current version into versions:
     os.system(f"cp ../{filetotrack} versions/init_version.py")
 
+    # write init_version to latest_version.json:
     with open("latest_version.json", "w") as f:
         json.dump({"latest_version": "init_version.py"}, f)
+
+    # create .txt file with changes and write current structure-view to it:
+    if f"{filetotrack}_changes.txt" not in os.listdir("../"):
+        os.system(f"touch ../{filetotrack.replace('.py', '')}_changes.txt")
+    with open(f"../{filetotrack.replace('.py', '')}_changes.txt", "w") as f:
+        backslash = "\n"
+        towrite = f"1.{backslash}{backslash.join(get_structure('init_version.py'))}"
+        f.write(towrite)
 
 
 def add_version(vname):  # add the version to versions
@@ -82,10 +97,10 @@ def get_structure(vname):
             else:
                 break
 
-        output = output.replace("def", "method", 2)
+        output = output.replace("def", "method", 1)
         return output
 
-    lines = read(f"versions/{v}").split("\n")
+    lines = read(f"versions/{vname}").split("\n")
     l = []
     for line in lines:
         l.append((int(how_many_spaces(line)/4 + 1))*"- " + line[how_many_spaces(line):])
