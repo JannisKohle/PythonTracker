@@ -1,4 +1,5 @@
 import os
+import json
 
 # 'pytracker_test.py is outside of this directroy, so you can't see it in the Repo.
 filetotrack = "pytracker_test.py"
@@ -14,6 +15,11 @@ def read(file):
 def write(file, text):
     with open(file, "w") as f:
         f.write(text)
+
+
+def get_latest_version():
+    with open("latest_version.json", "r") as f:
+        return json.load(f)["latest_version"]
 
 
 def create_everything():
@@ -32,12 +38,24 @@ def compare_versions(v1, v2):  # compare versions and write changes to .txt file
     pass
 
 
-def add_version():  # add the version to versions
+def init():
     global filetotrack
-    version_num = len(os.listdir("versions")) + 1
+    os.system(f"cp ../{filetotrack} versions/init_version.py")
+
+    with open("latest_version.json", "w") as f:
+        json.dump({"latest_version": "init_version.py"}, f)
+
+
+def add_version(vname):  # add the version to versions
+    global filetotrack
+
     # if latest version == current version
-    if read(f"versions/v{version_num-1}.py") != read(f"../{filetotrack}"):
-        os.system(f"cp ../{filetotrack} versions/v{version_num}.py")
+    if read(f"versions/{get_latest_version()}") != read(f"../{filetotrack}"):
+        os.system(f"cp ../{filetotrack} versions/{vname}.py")
+
+        with open("latest_version.json", "w") as f:
+            towrite = {"latest_version": vname+".py"}
+            json.dump(towrite, f)
     else:
         return "No changes to save"
 
@@ -46,7 +64,7 @@ def reset_everything():  # reset everything
     os.system("rm -rf versions")
 
 
-def get_structure(v):
+def get_structure(vname):
     def how_many_spaces(line):
         counter = 0
         for i in line:
