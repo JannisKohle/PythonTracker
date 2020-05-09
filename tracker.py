@@ -76,6 +76,8 @@ def add_version(vname):  # add the version to versions
     else:
         return "No changes to save"
 
+    # # TODO: It needs to write new changes to text file
+
 
 def reset_everything():  # reset everything
     os.system("rm -rf versions")
