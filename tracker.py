@@ -64,6 +64,8 @@ def init():
 def add_version(vname):  # add the version to versions
     global filetotrack
 
+    vname = vname.replace(" ", "_")
+
     # if latest version == current version
     if read(f"versions/{get_latest_version()}") != read(f"../{filetotrack}"):
         os.system(f"cp ../{filetotrack} versions/{vname}.py")
