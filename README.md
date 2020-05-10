@@ -102,7 +102,6 @@ After you saved the status of your python file a few times, it should like simil
 -changed method xy0
 ```
 
-------------------------
 
 If we print out the structure view (```pytracker structure-view```) now, we will see this:
 
