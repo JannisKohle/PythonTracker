@@ -135,6 +135,8 @@ If we print out the structure view (```pytracker structure-view```) now, we will
 
 ---tracker.py
 
+---latest-version.json
+
 ---.git:
 
 ----.....
@@ -143,29 +145,13 @@ If we print out the structure view (```pytracker structure-view```) now, we will
 
 ---versions:
 
-----version1
+----init_version.py
 
------v1_code.py
+----changed_something.py
 
------v1_structure.txt
+----another_change.py
 
-----version2
-
------v2_code.py
-
------v2_structure.txt
-
-----version3
-
------v3_code.py
-
------v3_structure.txt
-
-----version4
-
------v4_code.py
-
------v4_structure.txt
+----...
 
 ## How the program can get the changes of 2 versions (not important for users):
 
