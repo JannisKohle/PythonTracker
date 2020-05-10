@@ -9,7 +9,7 @@ It is very similar to git, just not for Repositories but it's optimized for pyth
 
 - Clone this Repo into your Project directory:
 ```cd path/to/your/projects/directory```,
-```git clone github.com/JannisKohle/PythonTracker```
+```git clone https://www.github.com/JannisKohle/PythonTracker.git```
 
 - Specify file to track: ```pytracker filename {name_of_your_python_file}```
 
