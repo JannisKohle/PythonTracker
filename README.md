@@ -166,3 +166,18 @@ If we print out the structure view (```pytracker structure-view```) now, we will
 -----v4_code.py
 
 -----v4_structure.txt
+
+## How the program can get the changes of 2 versions (not important for users):
+
+To get the changes of two versions, we need to do two things because there are two kinds of changes:
+
+1. First, we have to know if there are new classes / methods, or classes / methods got removed.
+   This part is easier because you don't need to look inside functions or classes. You can just
+   use the structure view.
+
+-----------------------
+
+2. To see if changes have been made inside of methods, the structure view is not enough.
+   We need to look at methods which are in both versions. Here we don't have to look at classes
+   because in classes there are just methods. -> If something changed in a class, that means
+   something changed in a method in the class.
