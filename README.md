@@ -38,6 +38,7 @@ With combining, you can combine two versions into one version. It's important th
 After you run tracker.py the first time, it will automatically create a file called '{name_of_your_python_file}_changes.txt'.
 In the file you can see a structured view of your classes and methods. Example:
 
+```
 -method xy1
 
 -class xy2
@@ -53,6 +54,7 @@ In the file you can see a structured view of your classes and methods. Example:
 ---method xy7
 
 --method xy8
+```
 
 As you can see, the methods xy3 and xy4 are in the class xy2, the methods xy6 and xy8 are in the class xy5
 and the method xy7 is in the method xy6. So that's what you see after running tracker.py the first time.
@@ -66,6 +68,7 @@ Examples:
 
 After you saved the status of your python file a few times, it should like similar to this example:
 
+```
 1.
 
 -method xy0
@@ -97,6 +100,7 @@ After you saved the status of your python file a few times, it should like simil
 -changed method xy6 in class xy4
 
 -changed method xy0
+```
 
 ------------------------
 
@@ -116,7 +120,9 @@ If we print out the structure view (```pytracker structure-view```) now, we will
 
 --method xy6
 
-## File Structure (not very important for users):
+
+
+## File Structure:
 
 -your Project:
 
