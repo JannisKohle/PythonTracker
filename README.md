@@ -105,19 +105,23 @@ After you saved the status of your python file a few times, it should like simil
 
 If we print out the structure view (```pytracker structure-view```) now, we will see this:
 
--method xy0
+```
 
--class xy1
+- method xy0
 
---method xy2
+- class xy1
 
---method xy3
+- - method xy2
 
--class xy4
+- - method xy3
 
---method xy5
+- class xy4
 
---method xy6
+- - method xy5
+
+- - method xy6
+
+```
 
 
 
