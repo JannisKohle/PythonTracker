@@ -39,21 +39,21 @@ After you run tracker.py the first time, it will automatically create a file cal
 In the file you can see a structured view of your classes and methods. Example:
 
 ```
--method xy1
+- method xy1
 
--class xy2
+- class xy2
 
---method xy3
+- - method xy3
 
---method xy4
+- - method xy4
 
--class xy5
+- class xy5
 
---method xy6
+- - method xy6
 
----method xy7
+- - - method xy7
 
---method xy8
+- - method xy8
 ```
 
 As you can see, the methods xy3 and xy4 are in the class xy2, the methods xy6 and xy8 are in the class xy5
@@ -71,13 +71,13 @@ After you saved the status of your python file a few times, it should like simil
 ```
 1.
 
--method xy0
+- method xy0
 
--class xy1
+- class xy1
 
---method xy2
+- - method xy2
 
---method xy3
+- - method xy3
 
 2.
 
